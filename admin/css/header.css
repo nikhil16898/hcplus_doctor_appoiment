@@ -1,0 +1,42 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.ad_title h1{
+	background-color: blue;
+	font-size: 50px;
+	padding: 20px;
+	color: #fff298;
+	margin: 0;
+}
+.navbar{
+    max-width: 100%;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    box-shadow: 0px 10px 40px #e1dbdb;
+    position: sticky;
+    top: 0px;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+.navbar nav ul{
+    margin: 21px auto;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 40px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    list-style: none;
+    font-size: 21px;
+    color: gray
+}
+nav ul li a:hover{
+    color: blue;
+}
+
+
