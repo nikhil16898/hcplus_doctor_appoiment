@@ -120,5 +120,5 @@ input[type="radio"]:checked + label:before{
 }
 .button input[type="submit"]:hover{
 	background-color: #247cff;
-	transition: 4000ms;
+	transition: 40ms;
 }

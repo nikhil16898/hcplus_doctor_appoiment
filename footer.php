@@ -45,7 +45,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-6 icon">
+          <div class="col-lg-3 col-md-6 icon">
             <h4>Socials Media</h4>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-facebook"></i>

@@ -1,4 +1,4 @@
-<?php 
+    <?php 
     session_start();
 ?>
 <!DOCTYPE html>
@@ -12,18 +12,19 @@
             border: 3px solid #aab2c9;
             border-collapse: collapse;
             width: 100%;
-            color: red;
             font-family: Arial Rounded MT Bold;
             text-align:left;
         }
         table th{
             border: 3px solid #c9aef3;
-            padding: 1px 1px;
-
+            padding: 10px 10px;
+            font-size:20px;
+            text-align:center;
         }
         table td{
             border: 1px solid #aab2c9;
             padding: 1px 1px;
+            text-align:center;
         }
         h3{
             text-align: center;
@@ -46,7 +47,7 @@
     <table>
         <tr>
             <th>Name</th>
-            <th>Email</th>
+            <!-- <th>Email</th> -->
             <th>Number</th>
             <th>Gender</th>
             <th>Age</th>
@@ -69,7 +70,7 @@
                 while($row = mysqli_fetch_array($result)){
                         echo "<tr>
                                 <td>".$row["name"]."</td>
-                                <td>".$row["email"]."</td>
+                                <!-- <td>".$row["email"]."</td> -->
                                 <td>".$row["number"]."</td>
                                 <td>".$row["gender"]."</td>
                                 <td>".$row["age"]."</td>

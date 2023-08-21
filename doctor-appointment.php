@@ -8,7 +8,7 @@
   if(isset($_POST['submit'])){
     include 'conn.php';
     $name = $_POST['name'];
-    $email = $_POST['email'];
+    // $email = $_POST['email'];
     $number = $_POST['mo_number'];
     $gender = $_POST['gender'];
     $age = $_POST['age'];
@@ -52,7 +52,7 @@
        <div class="deta1">
         <input type="text" name="name" placeholder="Full Name" required=""><br>
 
-          <input type="email" name="email" placeholder="Email" required=""><br>
+          <!-- <input type="email" name="email" placeholder="Email" required=""><br> -->
 
           <input type="text" name="mo_number" placeholder="Number" required=""><br>
 
@@ -87,6 +87,10 @@
    </div>
     </form>
   </div>
+
+  <?php
+        include "footer.php";
+    ?>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
