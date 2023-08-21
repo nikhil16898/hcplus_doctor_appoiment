@@ -18,13 +18,29 @@
                     <li><a href="doctor-appointment.php">Doctor Appointment</a></li>
                     <li><a href="check-appointment.php">Check Appointment</a></li>
                     <li><a href="login.php">Login</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="logout.php" onclick="logout_click()">Logout</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-   
+   <script>
+
+    // logout click button to show confirm massege 
+       function logout_click(){
+        let a= confirm("logout ?");
+     
+         if(a){
+           //code
+         }
+         else{
+           //code
+         }
+       }
+
+       
+
+   </script>
   </body>
 </html>
