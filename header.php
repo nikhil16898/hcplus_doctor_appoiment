@@ -18,7 +18,7 @@
                     <li><a href="doctor-appointment.php">Doctor Appointment</a></li>
                     <li><a href="check-appointment.php">Check Appointment</a></li>
                     <li><a href="login.php">Login</a></li>
-                    <li><a href="login.php" onclick="return logout_click()">Logout</a></li>
+                    <li><a onclick="return logout_click()">Logout</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -29,14 +29,17 @@
 
     // logout click button to show confirm massege 
        function logout_click(){
-        // let a= confirm("logout ?");
+        let a = confirm("logout ?");
      
-         if(confirm('Are you sure you want to logout')){
-           return true;
-           <?php session_unset(); ?>
+         if(a == true){
+           window.location = "/hcplus_doctor_appoiment/logout.php";
+          //  session_unset();
+
          }
          else{
-           return false;
+          window.location = "/hcplus_doctor_appoiment/index.php";
+
+
          }
        }
 

@@ -1,4 +1,4 @@
-    <?php 
+<?php 
     session_start();
 ?>
 <!DOCTYPE html>
@@ -35,15 +35,19 @@
     <?php
         include "header.php";
     ?>
-    <h3>
+
         <?php
             include "conn.php";
-            $sql = mysqli_query($con,"SELECT * from signup WHERE name='abc'");
-            // if($r = mysqli_fetch_arry($sql)){
-                
-            // }
+            $email = $_SESSION['user_email'];
+            $sql = mysqli_query($con,"SELECT `name` FROM `signup` WHERE `email` LIKE '$email'");
+            if(mysqli_num_rows($sql)>0){
+                while($row = mysqli_fetch_array($sql)){
+                    echo '<h3>'.$row['name'].'</h3>';
+                }
+            }
+            
         ?>
-    </h3>
+
     <table>
         <tr>
             <th>Name</th>
@@ -57,8 +61,8 @@
         </tr>
         <?php
             include "conn.php";
-            $email = $_SESSION['user_email'];
-            echo $email;
+            // $email = $_SESSION['user_email'];
+            // echo $email;
             if($email == false){
                 header("location:login.php");
             }
