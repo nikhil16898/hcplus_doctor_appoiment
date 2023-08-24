@@ -60,7 +60,7 @@
           &copy; Copyright <strong><span>HealthcarePlus</span>. All Right Reserved.</strong>
         </div>
         <div class="credits">
-          Design & Develop By <a href="#">Abhi Ratanpara</a> and <a href="#">nikil Solanki</a>
+          Design & Develop By <a href="#">Abhi Ratanpara</a> and <a href="#">Nikil Solanki</a>
         </div>
       </div>
     </footer>
