@@ -46,25 +46,49 @@ nav ul li a{
     font-size: 20px;
     color: gray
 }
-nav ul li a:hover{
+nav ul li a:hovera{
     color: blue;
 }
-.mobile-nav-toggle{
-    color: #2c4964;
-    font-size: 28px;
-    cursor:pointer;
+nav .menu-btn i{
+    font-size: 22px;
+    cursor: pointer;
     display: none;
-    transition: 0.5s;
+    color: gray;
 }
-.mobile-nav-toggle.bi-x{
-    color: white;
+#click{
+    display: none;
 }
-@media(max-width: 991px){
-    .mobile-nav-toggle{
-        display: block;
-    }
+@media(max-width: 958px){
     nav ul{
-        display: none;
+        position: fixed;
+        top: 73px;
+        left: -100%;
+        background-color: #2997fb;
+        height: 100vh;
+        width: 100%;
+        /*display: block;*/
+        transition: all 0.3s ease;
+        
     }
-}
+    #click:checked~ ul{
+        left: 0;
+    }
 
+    #click:checked~ .menu-btn i:before{
+        content: "\f00d"  /*cancel button*/ 
+    }
+    nav ul li{
+        margin: 40px 0;
+        display: block;
+        text-align: center;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color:white;
+        font-weight: 500;
+    }
+    nav .menu-btn i{
+    
+    display: block;
+ }
+}
