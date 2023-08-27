@@ -1,5 +1,6 @@
 <?php 
-    session_start();
+
+  include "session_start.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +69,7 @@
             }
             $sql = "SELECT * FROM `doctor-appointment` where  email='$email'";
             $result = mysqli_query($con,$sql);
-
+            
             // fetch data and print 
             if(mysqli_num_rows($result)>0){
                 while($row = mysqli_fetch_array($result)){

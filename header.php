@@ -14,7 +14,7 @@
         <img src="img\logo.png" alt="logo">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="gallery.php">Gallery</a></li>
+                    <li><a href="gallery_1.php">Gallery</a></li>
                     <li><a href="doctor-appointment.php">Doctor Appointment</a></li>
                     <li><a href="check-appointment.php">Check Appointment</a></li>
                     <li><a href="login.php">Login</a></li>

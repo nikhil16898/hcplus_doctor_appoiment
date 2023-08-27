@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 02, 2023 at 03:08 PM
+-- Generation Time: Aug 27, 2023 at 08:15 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -62,7 +62,38 @@ INSERT INTO `doctor-appointment` (`name`, `email`, `number`, `gender`, `age`, `d
 ('saklen', 'sasaxa@ass.com', 2147483647, 'male', 19, 'Raj', 'manavadar ', 'kaynay khale', '2023-08-01'),
 ('nayan', 'nayan@gmail.com', 789456, 'male', 19, 'Abhi', 'jgjdfgs', 'sdjhfjk', '2023-08-01'),
 ('riya', 'riya@gmail.com', 1234567893, 'femal', 17, 'Nikhil', 'zinzari', 'dskhfshf', '2023-08-01'),
-('avani', 'avani@avani', 123, 'femal', 14, 'Nikhil', 'zinzari', 'hgcdrct7\r\n\r\n\r\n89jhgyut', '2023-08-01');
+('avani', 'avani@avani', 123, 'femal', 14, 'Nikhil', 'zinzari', 'hgcdrct7\r\n\r\n\r\n89jhgyut', '2023-08-01'),
+('NIKHIL', 'nikhil@gmail.com', 2147483647, 'male', 19, 'Kartik', 'rf', 'rf', '2023-08-22'),
+('daSD', 'asd@gmail.com', 87879, 'male', 45, 'Abhi', 'dsf', 'sd', '2023-08-22'),
+('abhi', 'abhi@gmail.com', 2147483647, 'male', 19, 'Raj', 'asd', 'dfsa', '2023-08-24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `img` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`img`) VALUES
+('gallery/Acer_Wallpaper_04_3840x2400.jpg'),
+('gallery/Acer_Wallpaper_05_3840x2400.jpg'),
+('gallery/docter1.jpg'),
+('gallery/docter2.jpg'),
+('gallery/r2.jpg'),
+('gallery/s1.jpg'),
+('gallery/slider_1.jpg'),
+('gallery/slider_2.jpg'),
+('gallery/slider_3.jpg'),
+('gallery/about.jpg'),
+('gallery/footer.jpg'),
+('gallery/logo.png');
 
 -- --------------------------------------------------------
 
@@ -85,11 +116,9 @@ CREATE TABLE `signup` (
 --
 
 INSERT INTO `signup` (`id`, `name`, `email`, `mobile_number`, `pwd`, `confirm`, `date`) VALUES
-(1, 'abhi', 'asd@asd', 123, '456', '456', '2023-07-31'),
-(2, 'asd', 'asd@123', 1234568799, 'asd', 'asd', '2023-07-31'),
-(3, 'asd', 'asd@asd', 123456, 'asd', 'asd', '2023-08-01'),
-(4, 'nayan', 'nayan@gmail.com', 798, '456', '456', '2023-08-01'),
-(5, 'Solanki_Nikhil', 'solanki@asd', 123546789, '123', '123', '2023-08-01');
+(1, 'nikhil', 'nikhil@gmail.com', 1234567890, '123', '123', '2023-08-22'),
+(2, 'asdad', 'asd@gmail.com', 456, '789', '789', '2023-08-22'),
+(3, 'Abhi', 'abhi@gmail.com', 2147483647, '789', '789', '2023-08-24');
 
 --
 -- Indexes for dumped tables
@@ -121,7 +150,7 @@ ALTER TABLE `doctor`
 -- AUTO_INCREMENT for table `signup`
 --
 ALTER TABLE `signup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

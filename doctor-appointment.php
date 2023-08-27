@@ -1,10 +1,11 @@
 <?php
-  session_start();
 
-  $email = $_SESSION['user_email'];
-  if($email != true){
-    header("location:login.php");
-  }
+  include "session_start.php";
+
+  // $email = $_SESSION['user_email'];
+  // if($email != true){
+  //   header("location:login.php");
+  // }
   if(isset($_POST['submit'])){
     include 'conn.php';
     $name = $_POST['name'];

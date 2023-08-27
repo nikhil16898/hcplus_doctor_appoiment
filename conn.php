@@ -9,6 +9,6 @@
         die ("sorry".mysqli_connect_error());
     }
     else{
-        echo "connection successfully";
+        // echo "connection successfully";
     }
 ?>
