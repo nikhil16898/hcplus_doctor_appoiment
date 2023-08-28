@@ -1,5 +1,6 @@
 <?php
     session_unset();
+    error_reporting(0);
     session_start();
 ?>
 <!DOCTYPE html>
@@ -38,17 +39,18 @@
         $sanitized_password = mysqli_real_escape_string($con,$p);
         
         $sql = mysqli_query($con,"SELECT * FROM `signup` WHERE `email` LIKE '".$sanitized_email."' AND `pwd` LIKE '".$sanitized_password."'") or die(mysqli_error);
-        // if($r = mysqli_fetch_array($sql)){
+    
             if($r = mysqli_num_rows($sql)){
             // success
+                // session created
                 $_SESSION['user_email'] = $e;
                 header("location:index.php");
-            
-            // echo $r;
+                $con.close();
             
         }
         else{
             echo "<script>alert('plese enter correct email or password')</script>";
+            $con.close();
         }
     }
 

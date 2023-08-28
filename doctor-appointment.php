@@ -1,5 +1,5 @@
 <?php
-
+  error_reporting(0);
   include "session_start.php";
 
   // $email = $_SESSION['user_email'];
@@ -25,6 +25,7 @@
     echo "<script>alert('your appointment is done')</script>";
 
     header("location:check-appointment.php");
+    $con.close();
 
   }
   
@@ -57,13 +58,13 @@
 
           <input type="text" name="mo_number" placeholder="Number" required=""><br>
 
-          <input type="radio" name="gender" value="male" id="Male" checked="checked">
+          <input type="radio" name="gender" value="Male" id="Male" checked="checked">
           <label for="Male">Male</label>
 
-          <input type="radio" name="gender" value="femal" id="Female">
+          <input type="radio" name="gender" value="Femal" id="Female">
           <label for="Female">Female</label>
 
-          <input type="radio" name="gender" value="other" id="Other">
+          <input type="radio" name="gender" value="Other" id="Other">
           <label for="Other">Other</label>
      </div>
      <div class="deta2">

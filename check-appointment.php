@@ -1,6 +1,6 @@
 <?php 
-
-  include "session_start.php";
+    error_reporting(0);
+    include "session_start.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +29,7 @@
         }
         h3{
             text-align: center;
+            text-transform:uppercase;
         }
     </style>
 </head>
@@ -62,11 +63,6 @@
         </tr>
         <?php
             include "conn.php";
-            // $email = $_SESSION['user_email'];
-            // echo $email;
-            if($email == false){
-                header("location:login.php");
-            }
             $sql = "SELECT * FROM `doctor-appointment` where  email='$email'";
             $result = mysqli_query($con,$sql);
             
@@ -74,13 +70,13 @@
             if(mysqli_num_rows($result)>0){
                 while($row = mysqli_fetch_array($result)){
                         echo "<tr>
-                                <td>".$row["name"]."</td>
+                                <td style='text-transform:capitalize;' >".$row["name"]."</td>
                                 <!-- <td>".$row["email"]."</td> -->
                                 <td>".$row["number"]."</td>
                                 <td>".$row["gender"]."</td>
                                 <td>".$row["age"]."</td>
-                                <td>".$row["doctor"]."</td>
-                                <td>".$row["address"]."</td>
+                                <td style='text-transform:capitalize;' >".$row["doctor"]."</td>
+                                <td style='text-transform:capitalize;' >".$row["address"]."</td>
                                 <td>".$row["massage"]."</td>
                             <tr>";
                 }
@@ -89,6 +85,7 @@
             else{
                 echo "0 records found";
             }
+            $con.close();
         ?>
     </table>
     <?php

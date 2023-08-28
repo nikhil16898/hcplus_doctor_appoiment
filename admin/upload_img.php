@@ -35,6 +35,7 @@
 
     $sql =  "INSERT INTO `gallery` (`img`) VALUES ('$folder')";
     mysqli_query($con,$sql);
+    $con.close();
     }
 
 ?>

@@ -1,6 +1,6 @@
 <?php 
-
-include "session_start.php";
+  include "session_start.php";
+  error_reporting(0);
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,8 +23,12 @@ include "session_start.php";
             <?php
 
             include "conn.php";
+
+            // img
             $sql = "SELECT * FROM `gallery`";
             $result = mysqli_query($con,$sql);
+
+            // fetch img path in to database
             if(mysqli_num_rows($result) > 0){
               while($img = mysqli_fetch_array($result)){
                 echo '<div class="col-md-3">
@@ -35,6 +39,7 @@ include "session_start.php";
                 // echo "admi/".$img["img"];
               }
             }
+            $con.close();
 
             ?>  
          </div>

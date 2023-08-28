@@ -1,4 +1,5 @@
 <?php 
+  error_reporting(0);
   session_start();
   $email = $_SESSION['user_email'];
   if($email == false){
