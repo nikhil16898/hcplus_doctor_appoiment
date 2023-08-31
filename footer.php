@@ -28,7 +28,7 @@
             <h4>Useful links</h4>
             <ul>
                     <li><i class="fa-solid fa-chevron-right"></i><a href="index.php">Home</a></li>
-                    <li><i class="fa-solid fa-chevron-right"></i><a href="#">Gallery</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i><a href="gallery.php">Gallery</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i><a href="doctor-appointment.php">Doctor Appointment</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i><a href="check-appointment.php">Check Appointment</a></li>
                     <li><i class="fa-solid fa-chevron-right"></i><a href="login.php">Login</a></li>
