@@ -31,6 +31,14 @@
             text-align: center;
             text-transform:uppercase;
         }
+        tr .approve {
+            color: #00d200;
+       
+        }
+        tr .pending {
+            color: #0000f3;
+            
+        }
     </style>
 </head>
 <body>
@@ -46,8 +54,7 @@
                 while($row = mysqli_fetch_array($sql)){
                     echo '<h3>'.$row['name'].'</h3>';
                 }
-            }
-            
+            }   
         ?>
 
     <table>
@@ -60,6 +67,7 @@
             <th>Doctor</th>
             <th>Address</th>
             <th>Massage</th>
+            <th>Status</th>
         </tr>
         <?php
             include "conn.php";
@@ -78,6 +86,7 @@
                                 <td style='text-transform:capitalize;' >".$row["doctor"]."</td>
                                 <td style='text-transform:capitalize;' >".$row["address"]."</td>
                                 <td>".$row["massage"]."</td>
+                                <td class='".$row["status"]."'>".$row["status"]."</td>
                             <tr>";
                 }
                 echo "</table>";
@@ -89,7 +98,7 @@
         ?>
     </table>
     <?php
-        include "footer.php";
+        include "footer.php"
     ?>
 </body>
 </html>

@@ -31,6 +31,7 @@
             text-align: center;
             text-transform:uppercase;
         }
+       
     </style>
 </head>
 <?php include "ad_header.php"; ?>
@@ -68,7 +69,7 @@
                                 <td style='text-transform:capitalize;' >".$row["address"]."</td>
                                 <td>".$row["massage"]."</td>
                                 <td>"; ?>
-                                <a href="up.php?id=<?php echo $row['id']; ?>&stat=<?php echo $row['status']; ?>" style=''>
+                                <a href="up.php?id=<?php echo $row['id']; ?>&stat=<?php echo $row['status']; ?>">
                                 <?php
                                     echo $row['status']; 
                                  ?>
