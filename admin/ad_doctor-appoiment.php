@@ -67,11 +67,17 @@
                                 <td style='text-transform:capitalize;' >".$row["doctor"]."</td>
                                 <td style='text-transform:capitalize;' >".$row["address"]."</td>
                                 <td>".$row["massage"]."</td>
-                                <td>
-                                    <input type='button' name='".$row["id"]."' value='Approved' style='padding: 3px 6px; margin: 3px 6px;'>
-                                    <input type='button' name='".$row["id"]."' value='Rejected' style='padding: 3px 6px; margin: 3px 6px;'>
-                                </td>
-                            <tr>";
+                                <td>"; ?>
+                                <a href="up.php?id=<?php echo $row['id']; ?>&stat=<?php echo $row['status']; ?>" style=''>
+                                <?php
+                                    echo $row['status']; 
+                                 ?>
+                                 </a>
+
+
+                               <?php
+                                echo "</td>
+                            <tr>"; 
                 }
             }
             else{
