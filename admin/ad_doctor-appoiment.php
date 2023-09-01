@@ -31,16 +31,11 @@
             text-align: center;
             text-transform:uppercase;
         }
-        tr a {
-            text-decoration: none;
-            border: 1px solid black;
-            padding: 1px 7px;
-            margin: 1px 3px;
-        }
     </style>
 </head>
 <?php include "ad_header.php"; ?>
 <body>
+    <form action="#" method="post">
     <table>
         <tr>
             <th>ID</th>
@@ -72,17 +67,24 @@
                                 <td style='text-transform:capitalize;' >".$row["doctor"]."</td>
                                 <td style='text-transform:capitalize;' >".$row["address"]."</td>
                                 <td>".$row["massage"]."</td>
-                                <td><a href='ad_approval.php'>Approval</a><a href='ad_dis_approval.php'>DisApproved</a></td>
+                                <td>
+                                    <input type='button' name='".$row["id"]."' value='Approved' style='padding: 3px 6px; margin: 3px 6px;'>
+                                    <input type='button' name='".$row["id"]."' value='Rejected' style='padding: 3px 6px; margin: 3px 6px;'>
+                                </td>
                             <tr>";
                 }
-                echo "</table>";
             }
             else{
                 echo "0 records found";
             }
         ?>
     </table>
+    </form>
+    <?php
+
+    ?>
     
 </body>
+
     <?php include "ad_footer.php";?>
 </html>
