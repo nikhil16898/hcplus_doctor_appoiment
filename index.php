@@ -76,6 +76,34 @@
    </div>
  </div>
 
+ <!-- gallery -->
+ <div class="gallery">
+    <div class="gallery_title">
+      <center><h1>our gallery</h1></center>
+    </div>
+      <div class="container">
+        <div class="row">
+              <div class="col-md-4 py-3 py-md-0">
+              <div class="gallery-photo">
+                      <img src="img\index-gallery\docter2.jpg" alt="photo">
+              </div>
+            </div>
+              <div class="col-md-4 py-3 py-md-0">
+              <div class="gallery-photo">
+                      <img src="img\index-gallery\docter2.jpg" alt="photo">
+              </div>
+            </div>
+              <div class="col-md-4 py-3 py-md-0">
+              <div class="gallery-photo">
+                      <img src="img\index-gallery\docter2.jpg" alt="photo">
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="gallery_button">
+        <center><button>show More</button></center>
+      </div>
+  </div>
  <!-- doctor -->
 <!-- doctor title -->
 <div class="do">
