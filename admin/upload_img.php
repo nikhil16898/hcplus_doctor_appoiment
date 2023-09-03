@@ -1,4 +1,5 @@
 <?php
+    session_start();
     error_reporting(0);
     include "ad_header.php";
 
@@ -46,8 +47,15 @@
         
     }
     form .view_photo{
+        display: flex;
+        text-decoration: none;
+        border: 1px solid black;
+        border-radius: 5px;
+        background: black;
+        color:white;
         margin-top: 50px;
-        width: 150px;
+        padding: 5px 5px;
+        width: 98px;
 
     }
 </style>
@@ -58,7 +66,8 @@
         <input type="file" name="uploadphoto" class="file">
         <input type="submit" name="submit" value="Upload Photo">
         <center>
-        <input type="submit" name="" value="View Photo" class="view_photo">
+        <!-- <input type="submit" name="" value="View Photo" class="view_photo"> -->
+        <a href="view_img.php" class="view_photo">view photos</a>
         </center>
     </form>
 </body>
@@ -70,11 +79,11 @@
     include 'conn.php';
 
     // fatch name in php temp name
-    $filename = $_FILES["uploadphoto"]["name"];
+    $photoname = $_FILES["uploadphoto"]["name"];
     $tempname = $_FILES["uploadphoto"]["tmp_name"];
     
     // store photo in folder
-    $folder = "gallery/".$filename;
+    $folder = "gallery/".$photoname;
     move_uploaded_file($tempname, $folder);
 
     // echo "<img src='$folder' hight='100px' width='100px'>";
