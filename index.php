@@ -118,7 +118,7 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="swiper-img">
-          <img src="img/docter/docter1.jpg">
+          <img src="img/doctors/1.png">
           <div class="doctre-content">
             <h2>Dr.name sarname</h2>
             <p>deta</p>
@@ -128,7 +128,7 @@
       </div>
       <div class="swiper-slide">
         <div class="swiper-img">
-          <img src="img/docter/docter1.jpg">
+          <img src="img/doctors/2.jpg">
            <div class="doctre-content">
             <h2>Dr.name sarname</h2>
             <p>deta</p>
@@ -138,7 +138,7 @@
       </div>
       <div class="swiper-slide">
         <div class="swiper-img">
-          <img src="img/docter/docter1.jpg">
+          <img src="img/doctors/3.jpg">
            <div class="doctre-content">
             <h2>Dr.name sarname</h2>
             <p>deta</p>
@@ -148,7 +148,7 @@
       </div>
       <div class="swiper-slide">
         <div class="swiper-img">
-          <img src="img/docter/docter1.jpg">
+          <img src="img/doctors/4.jpg">
            <div class="doctre-content">
             <h2>Dr.name sarname</h2>
             <p>deta</p>
@@ -157,7 +157,7 @@
         </div></div>
       <div class="swiper-slide">
         <div class="swiper-img">
-          <img src="img/docter/docter1.jpg">
+          <img src="img/doctors/1.png">
            <div class="doctre-content">
             <h2>Dr.name sarname</h2>
             <p>deta</p>
@@ -167,7 +167,7 @@
       </div>
       <div class="swiper-slide">
         <div class="swiper-img">
-          <img src="img/docter/docter1.jpg">
+          <img src="img/doctors/1.png">
            <div class="doctre-content">
             <h2>Dr.name sarname</h2>
             <p>deta</p>
@@ -197,36 +197,36 @@
       </div>
        <div class="col-lg-4 col-md-6 d-flex alig-items-stretch mt-4 mt-md-0">
         <div class="icon-box">
-          <div class="icon"><i class="fas fa-heartbeat"></i></div>
-          <h4><a href="">Regular Checkup</a></h4>
+          <div class="icon"><i class="fa-solid fa-pills"></i></div>
+          <h4><a href="">Medicine</a></h4>
           <p>Quisquam ques quisquam cupiditate Et nemo que imedite suscipit</p>
         </div>
       </div>
        <div class="col-lg-4 col-md-6 d-flex alig-items-stretch mt-4 mt-md-0">
         <div class="icon-box">
-          <div class="icon"><i class="fas fa-heartbeat"></i></div>
-          <h4><a href="">Regular Checkup</a></h4>
+          <div class="icon"><i class="fa-solid fa-hospital-user"></i></div>
+          <h4><a href="">Pharmeologist</a></h4>
           <p>Quisquam ques quisquam cupiditate Et nemo que imedite suscipit</p>
         </div>
       </div>
        <div class="col-lg-4 col-md-6 d-flex alig-items-stretch mt-4">
         <div class="icon-box">
-          <div class="icon"><i class="fas fa-heartbeat mt-4"></i></div>
-          <h4><a href="">Regular Checkup</a></h4>
+          <div class="icon"><i class="fa-solid fa-dna"></i></div>
+          <h4><a href="">blood Test</a></h4>
           <p>Quisquam ques quisquam cupiditate Et nemo que imedite suscipit</p>
         </div>  
       </div>
        <div class="col-lg-4 col-md-6 d-flex alig-items-stretch mt-4">
         <div class="icon-box">
-          <div class="icon"><i class="fas fa-heartbeat"></i></div>
-          <h4><a href="">Regular Checkup</a></h4>
+          <div class="icon"><i class="fa-solid fa-wheelchair"></i></div>
+          <h4><a href="">Disabled Person</a></h4>
           <p>Quisquam ques quisquam cupiditate Et nemo que imedite suscipit</p>
         </div>
       </div>
        <div class="col-lg-4 col-md-6 d-flex alig-items-stretch mt-4">
         <div class="icon-box">
-          <div class="icon"><i class="fas fa-heartbeat"></i></div>
-          <h4><a href="">Regular Checkup</a></h4>
+          <div class="icon"><i class="fa-solid fa-notes-medical"></i></div>
+          <h4><a href="">Health Post</a></h4>
           <p>Quisquam ques quisquam cupiditate Et nemo que imedite suscipit</p>
         </div>
       </div>

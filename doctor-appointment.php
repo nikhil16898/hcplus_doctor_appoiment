@@ -53,6 +53,15 @@
           <!-- <input type="email" name="email" placeholder="Email" required=""><br> -->
 
           <input type="text" name="mo_number" placeholder="Number" required=""><br>
+          
+           <select class="sdocter" name="doctor" required="">
+         <option value="">blood group</option>
+         <option value="Nikhil">A</option>
+         <option value="Abhi">B</option>
+         <option value="Kartik">A+</option>
+         <option value="Raj">B+</option>
+         <option value="Jenil">0</option>
+        </select><br>
 
           <input type="radio" name="gender" value="Male" id="Male" checked="checked">
           <label for="Male">Male</label>
@@ -78,10 +87,14 @@
      </div>
      </div>
      <div class="massage">
+      <center>
      <textarea placeholder="Enter Massage" name="message" rows="5" cols="65"></textarea>
+     </center>
    </div>
    <div class="button">
+    <center>
      <input type="submit" name="submit" value="Appointment Now">
+     </center>
    </div>
     </form>
   </div>
