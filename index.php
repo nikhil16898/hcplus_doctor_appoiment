@@ -83,25 +83,24 @@
     </div>
       <div class="container">
         <div class="row">
-              <div class="col-md-4 py-3 py-md-0">
-              <div class="gallery-photo">
-                      <img src="img\index-gallery\docter2.jpg" alt="photo">
-              </div>
-            </div>
-              <div class="col-md-4 py-3 py-md-0">
-              <div class="gallery-photo">
-                      <img src="img\index-gallery\docter2.jpg" alt="photo">
-              </div>
-            </div>
-              <div class="col-md-4 py-3 py-md-0">
-              <div class="gallery-photo">
-                      <img src="img\index-gallery\docter2.jpg" alt="photo">
-              </div>
-            </div>
+            <?php
+                include "conn.php";
+                $sql = mysqli_query($con,"SELECT * FROM gallery LIMIT 3");
+                if(mysqli_num_rows($sql) > 0){
+                  while($row = mysqli_fetch_array($sql)){
+                    echo '<div class="col-md-4 py-3 py-md-0">
+                    <div class="gallery-photo">
+                            <img src="admin/'.$row["img"].'" alt="photo">
+                    </div>
+                  </div>';
+                  }
+                }
+              ?>
           </div>
+        </div>
       </div>
       <div class="gallery_button">
-        <center><button>show More</button></center>
+        <center><button><a href="gallery_1.php" style="color:white; text-decoration: none;">show More</a></button></center>
       </div>
   </div>
  <!-- doctor -->
