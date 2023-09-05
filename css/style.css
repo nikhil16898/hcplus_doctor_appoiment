@@ -4,8 +4,6 @@
 }
 
 /* header slider */
-
-
 .slider{
   /*position: relative;*/
   /*overflow: hidden;*/
@@ -73,7 +71,7 @@
 /* gallery */
 
 .gallery_title h1{
-  color: #1977cc;
+  color: #2c4964;
   margin-bottom: 50px;
 }
 
@@ -102,91 +100,106 @@
   color: #fff;
 }
 
+/*doctor*/
 
-/*docter title*/
-
-.docter{
-  margin-bottom: 60px;
-  width: 100%;
-}
-.docter-title{
-  text-align: center;
-}
-.docter-title h1{
-  font-size: 40px;
-}
-.docter-title h1 span{
-  color: blue;
+.doctors{
+  background-color: #fff;
 }
 
-
-/*docter slider*/
-.swiper {
-      width: 80%;
-      height: 100%;
+.docter-title h2{
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #2c4964;
+}
+.doctors .member{
+  position: relative;
+  box-shadow: 0px 2px 15px rgba(44,73,100,0.2);
+  padding: 30px;
+  border-radius: 10px;
 }
 
-.swiper-slide {
-      /*background: #fff9df;*/
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /*border: 1px solid red;
-      /*padding: 20px;*/
+.doctors .member .pic{
+  overflow: hidden; /*photo zoom aatela maj tay*/
+  width: 200px;
+  border-radius: 50%;
 }
-
-
-.swiper-slide img {
-      display: block;
-      width: 300px;
-      height: 350px;
-      object-fit: cover;
-      border-radius: 8px;
-      cursor: pointer;
+.doctors .member .pic img{
+      transition: 0.3s ease-in-out;
 }
-.doctre-content h2{
-   font-size: 30px;
-   font-weight: 500;
-   color: blue;
-   margin-top: 15px;
-   margin-bottom: 0;
-   text-align: center;
+.doctors .member:hover img{
+  transform: scale(1.1);
 }
-.doctre-content p{
-  margin: 0;
-  padding: 0;
-  font-size: 23px;
+.doctors .member .member-info{
+  padding-left: 30px;
+}
+.doctors .member h4{
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #2c4964;
+}
+.doctors .member span{
+  display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
   font-weight: 500;
-  text-align: center;
 }
-.doctre-content a{
-  background: darkorange;
-  cursor: pointer;
-  padding: 8px 10px;
-  font-size: 12px;
-  display: inline-block;
-  margin-left: 65px;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  margin-top: 5px;
+.doctors .member span::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: #b2c8dd;
+  bottom:0;
+  left: 0;
 }
-
-.doctre-content a:hover{
-  background: blue;
-  color: white; 
+.doctors .member p{
+  margin: 10px 0 0 0;
+  font-size: 14px;
 }
 
- /*services*/
+.doctors .member .social{
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
+.doctors .member .social a{
+   transition: ease-in-out 0.3s;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50px;
+   width: 32px;
+   height: 32px;
+   background-color: #a0bcd5;
+}
+.doctors .member .social a:hover{
+  background-color: #3fbbc0;
+}
+.doctors .member .social a i{
+  color: #fff;
+  font-size: 16px;
+  margin:0 2px;
+}
+.doctors .member .social a+a{
+  margin-left: 8px;
+}
+
+/*services*/
 .services-title h2{
   text-align: center;
   padding-bottom: 30px; 
   font-weight: 600;
   margin-bottom: 20px;
   position: relative;
-  color: blue;
+  color: #2c4964;
   margin-top: 20px;
   font-size: 40px; 
 }
@@ -260,7 +273,7 @@
   font-weight: 600;
   margin-bottom: 20px;
   position: relative;
-  color: blue;
+  color: #2c4964;
   margin-top: 70px;
   font-size: 40px; 
 }

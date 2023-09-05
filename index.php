@@ -76,109 +76,92 @@
    </div>
  </div>
 
- <!-- gallery -->
- <div class="gallery">
-    <div class="gallery_title">
-      <center><h1>our gallery</h1></center>
+
+<!-- doctor -->
+
+<section id="doctors" class="doctors">
+  <div class="container">
+    <div class="docter-title">
+      <center><h2>Doctor</h2></center>
     </div>
-      <div class="container">
-        <div class="row">
-            <?php
-                include "conn.php";
-                $sql = mysqli_query($con,"SELECT * FROM gallery LIMIT 3");
-                if(mysqli_num_rows($sql) > 0){
-                  while($row = mysqli_fetch_array($sql)){
-                    echo '<div class="col-md-4 py-3 py-md-0">
-                    <div class="gallery-photo">
-                            <img src="admin/'.$row["img"].'" alt="photo">
-                    </div>
-                  </div>';
-                  }
-                }
-              ?>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="member d-flex alig-items-start">
+          <div class="pic"><img src="img/doctors/1.png" class="img-fluid"></div>
+          <div class="member-info"> 
+            <h4>Abhi ratanpara</h4>
+            <span>Chief Medical Officer</span>
+            <p>sit sint consectetur velit.
+            Quisquam quos quisquam cupiditate.</p>
+            <div class="social">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="gallery_button">
-        <center><button><a href="gallery_1.php" style="color:white; text-decoration: none;">show More</a></button></center>
-      </div>
-  </div>
- <!-- doctor -->
-<!-- doctor title -->
-<div class="do">
-   <div class="docter">
-     
-      <div class="docter-title">
-        <h1>Meet <span>our</span> Doctor</h1>
-      </div>
-  </div>
-<!-- docter slider -->
-    <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="swiper-img">
-          <img src="img/doctors/1.png">
-          <div class="doctre-content">
-            <h2>Dr.name sarname</h2>
-            <p>deta</p>
-            <a href="#">book appointment</a>
+
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="member d-flex alig-items-start">
+          <div class="pic"><img src="img/doctors/4.jpg" class="img-fluid"></div>
+          <div class="member-info"> 
+            <h4>pritiksha</h4>
+            <span>Anesthesiologist</span>
+            <p>sit sint consectetur velit.
+            Quisquam quos quisquam cupiditate.</p>
+            <div class="social">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div class="swiper-img">
-          <img src="img/doctors/2.jpg">
-           <div class="doctre-content">
-            <h2>Dr.name sarname</h2>
-            <p>deta</p>
-            <a href="#">book appointment</a>
+
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex alig-items-start">
+          <div class="pic"><img src="img/doctors/2.jpg" class="img-fluid"></div>
+          <div class="member-info"> 
+            <h4>Nikhil Solanki</h4>
+            <span>Cardiology</span>
+            <p>sit sint consectetur velit.
+            Quisquam quos quisquam cupiditate.</p>
+            <div class="social">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div class="swiper-img">
-          <img src="img/doctors/3.jpg">
-           <div class="doctre-content">
-            <h2>Dr.name sarname</h2>
-            <p>deta</p>
-            <a href="#">book appointment</a>
+
+      <div class="col-lg-6 mt-4">
+        <div class="member d-flex alig-items-start">
+          <div class="pic"><img src="img/doctors/3.jpg" class="img-fluid"></div>
+          <div class="member-info"> 
+            <h4>Lauren Jones</h4>
+            <span>Neurologist</span>
+            <p>sit sint consectetur velit.
+            Quisquam quos quisquam cupiditate.</p>
+            <div class="social">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div class="swiper-img">
-          <img src="img/doctors/4.jpg">
-           <div class="doctre-content">
-            <h2>Dr.name sarname</h2>
-            <p>deta</p>
-            <a href="#">book appointment</a>
-          </div>
-        </div></div>
-      <div class="swiper-slide">
-        <div class="swiper-img">
-          <img src="img/doctors/1.png">
-           <div class="doctre-content">
-            <h2>Dr.name sarname</h2>
-            <p>deta</p>
-            <a href="#">book appointment</a>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swiper-img">
-          <img src="img/doctors/1.png">
-           <div class="doctre-content">
-            <h2>Dr.name sarname</h2>
-            <p>deta</p>
-            <a href="#">book appointment</a>
-          </div>
-        </div>
-      </div>
+
     </div>
-           <br><br>
-        <div class="swiper-pagination"></div>
-</div>
-</div>
+  </div>
+</section>
+
 
 <!-- services -->
 <section id="services" class="services">

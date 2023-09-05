@@ -38,10 +38,11 @@
             <h4>Our Services</h4>
             <ul>
               <li><i class="fa-solid fa-chevron-right"></i>Regular Checkup</li>
-              <li><i class="fa-solid fa-chevron-right"></i>Regular Checkup</li>
-              <li><i class="fa-solid fa-chevron-right"></i>Regular Checkup</li>
-              <li><i class="fa-solid fa-chevron-right"></i>Regular Checkup</li>
-              <li><i class="fa-solid fa-chevron-right"></i>Regular Checkup</li>
+              <li><i class="fa-solid fa-chevron-right"></i>Medicine</li>
+              <li><i class="fa-solid fa-chevron-right"></i>Pharmeologist</li>
+              <li><i class="fa-solid fa-chevron-right"></i>blood Test</li>
+              <li><i class="fa-solid fa-chevron-right"></i>Disabled Person</li>
+              <li><i class="fa-solid fa-chevron-right"></i>Health Post</li>
             </ul>
           </div>
 
