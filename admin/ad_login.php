@@ -1,4 +1,6 @@
 <?php
+    session_unset();
+    session_start();
     if(isset($_POST['submit'])){
         
         include 'conn.php';  
@@ -30,12 +32,26 @@
 </head>
 <body>
 
-    <form action="" method="post" class="box">
+    <form action="#" method="post" class="box">
         <h1>Admin login</h1>
-
         <input type="text" name="email" placeholder="Enter email" required=""><br><br>
         <input type="text" name="password" placeholder="Enter password" required=""><br><br>
         <input type="submit" name="submit" value="Login">
     </form>
 </body>
 </html>
+<?php
+    if(isset($_POST['submit'])){
+        include "conn.php";
+        $email = $_POST['email'];
+        $pwd = $_POST['password'];
+        $sanitized_email = mysqli_real_escape_string($con,$email);
+        $sanitized_password = mysqli_real_escape_string($con,$pwd); 
+        $sql = mysqli_query($con,"SELECT * FROM `supper_login` WHERE `name` LIKE '$sanitized_email' AND `email` LIKE '$sanitized_password'");
+        if (mysqli_num_rows($sql)){
+            $_SESSION['email'] = $email;
+            header("location:index.php");
+        }
+    }
+?>
+<!-- SELECT * FROM `supper_login` WHERE `name` LIKE 'nikhil@gmail.com' AND `email` LIKE 'nikhil' -->
