@@ -5,7 +5,8 @@
   if(isset($_POST['submit'])){
     include 'conn.php';
     $name = $_POST['name'];
-    // $email = $_POST['email'];
+    $email = $_SESSION['user_email'];
+    $blood_group = $_POST['blood_group'];
     $number = $_POST['mo_number'];
     $gender = $_POST['gender'];
     $age = $_POST['age'];
@@ -14,7 +15,7 @@
     $message = $_POST['message'];
     
     // query store in sql variable
-    $sql = "INSERT INTO `doctor-appointment` (`name`, `email`, `number`, `gender`, `age`, `doctor`, `address`, `massage`, `date`) VALUES ('$name', '$email', '$number', '$gender', '$age', '$doctor', '$address', '$message', current_timestamp());";
+    $sql = "INSERT INTO `doctor-appointment` (`id`, `name`, `email`, `number`, `blood_group`, `gender`, `age`, `doctor`, `address`, `massage`, `date`, `status`) VALUES (NULL, '$name', '$email','$number', '$blood_group', '$gender', '$age', '$doctor', '$address', '$message', current_timestamp(), 'pending');";
     //run query 
     mysqli_query($con,$sql);
 
@@ -54,13 +55,13 @@
 
           <input type="text" name="mo_number" placeholder="Number" required=""><br>
           
-           <select class="sdocter" name="doctor" required="">
+           <select class="sdocter" name="blood_group" required="">
          <option value="">blood group</option>
-         <option value="Nikhil">A</option>
-         <option value="Abhi">B</option>
-         <option value="Kartik">A+</option>
-         <option value="Raj">B+</option>
-         <option value="Jenil">0</option>
+         <option value="A">A</option>
+         <option value="B">B</option>
+         <option value="A+">A+</option>
+         <option value="B+">B+</option>
+         <option value="O-">O-</option>
         </select><br>
 
           <input type="radio" name="gender" value="Male" id="Male" checked="checked">

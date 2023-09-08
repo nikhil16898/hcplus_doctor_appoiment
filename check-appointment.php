@@ -62,6 +62,7 @@
             <th>Name</th>
             <!-- <th>Email</th> -->
             <th>Number</th>
+            <th>Blood Group</th>
             <th>Gender</th>
             <th>Age</th>
             <th>Doctor</th>
@@ -81,6 +82,7 @@
                                 <td style='text-transform:capitalize;' >".$row["name"]."</td>
                                 <!-- <td>".$row["email"]."</td> -->
                                 <td>".$row["number"]."</td>
+                                <td>".$row["blood_group"]."</td>
                                 <td>".$row["gender"]."</td>
                                 <td>".$row["age"]."</td>
                                 <td style='text-transform:capitalize;' >".$row["doctor"]."</td>

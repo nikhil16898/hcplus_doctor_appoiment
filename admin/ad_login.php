@@ -1,25 +1,4 @@
-<?php
-    session_unset();
-    session_start();
-    if(isset($_POST['submit'])){
-        
-        include 'conn.php';  
-        $e = $_POST['email'];
-        $p = $_POST['password'];
-        
-        $sql = mysqli_query($con,"SELECT * FROM `signup` WHERE `email` LIKE '$e' AND `pwd` LIKE '$p'");
-        if($r = mysqli_fetch_array($sql)){
-            // success
-            header("location:index.php");
-            
-        }
-        else{
-            echo "<script>alert('plese enter correct email or password')</script>";
-        }
-    }
 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +26,7 @@
         $pwd = $_POST['password'];
         $sanitized_email = mysqli_real_escape_string($con,$email);
         $sanitized_password = mysqli_real_escape_string($con,$pwd); 
-        $sql = mysqli_query($con,"SELECT * FROM `supper_login` WHERE `name` LIKE '$sanitized_email' AND `email` LIKE '$sanitized_password'");
+        $sql = mysqli_query($con,"SELECT * FROM `supper_login` WHERE `email` LIKE '$sanitized_email' AND `pwd` LIKE '$sanitized_password'");
         if (mysqli_num_rows($sql)){
             $_SESSION['email'] = $email;
             header("location:index.php");
