@@ -277,18 +277,29 @@
  
  include "conn.php";
 
+<<<<<<< HEAD
  $name=$_POST['name'];
  $email=$_POST['email'];
  $subject=$_POST['subject'];
  $massage=$_POST['massage'];
+=======
+>>>>>>> 36cf239c28715becbd2db089c3e1943cac7bca9d
 
  if(isset($_POST['submit'])){
     
-    // $sql="insert into `contact`(`name`,`email`,`subject`,`massage`)values('$name','$email','$subject','$massege')";
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $subject=$_post['subject'];
+    $massage=$_POST['massege'];
     $sql="INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`, `date`) VALUES (NULL, '$name', '$email', '$subject', '$massage', current_timestamp());";
   
+<<<<<<< HEAD
      mysqli_query($con,$sql);
       echo"<script>alert('your massage send...')</script>";
+=======
+    mysqli_query($con,$sql);
+    echo"<script>alert('deta insert')</script>";
+>>>>>>> 36cf239c28715becbd2db089c3e1943cac7bca9d
  }
 
 

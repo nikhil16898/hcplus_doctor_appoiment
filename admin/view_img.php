@@ -65,15 +65,14 @@
                             <td>name</td>
                             <td>'
                             ?>
-                             <a href="delete_photo.php?id=<?php echo $row['id'];?>">
+                             <a href="delete_photo.php?id=<?php echo $row['id']; ?>">
                              <?php
                                 echo "Delete"
                              ?>
                             </a>
                             <?php
                             '</td>
-                          </tr>';
-                            
+                          </tr>';     
                 }
             }
            

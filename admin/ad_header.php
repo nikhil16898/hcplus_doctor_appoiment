@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,9 +20,15 @@
                 <ul>
                     <li><a href="index.php">Appointments</a></li>
                     <li><a href="upload_img.php">Upload photo</a></li>
+<<<<<<< HEAD
                     <li><a href="show-users.php">users</a></li>
                     <li><a href="show-contact.php">Contacts</a></li>
                     <li><a href="#">Logout</a></li>
+=======
+                    <li><a href="#">users</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="leave.php">Leave</a></li>
+>>>>>>> 36cf239c28715becbd2db089c3e1943cac7bca9d
                 </ul>
         </nav>
     </div>

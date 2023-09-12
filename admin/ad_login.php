@@ -1,4 +1,7 @@
-
+<?php   
+    error_reporting(0);
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +17,7 @@
     <form action="#" method="post" class="box">
         <h1>Admin login</h1>
         <input type="text" name="email" placeholder="Enter email" required=""><br><br>
-        <input type="text" name="password" placeholder="Enter password" required=""><br><br>
+        <input type="text" name="pwd" placeholder="Enter password" required=""><br><br>
         <input type="submit" name="submit" value="Login">
     </form>
 </body>
@@ -23,13 +26,18 @@
     if(isset($_POST['submit'])){
         include "conn.php";
         $email = $_POST['email'];
-        $pwd = $_POST['password'];
+        $pwd = $_POST['pwd'];
         $sanitized_email = mysqli_real_escape_string($con,$email);
         $sanitized_password = mysqli_real_escape_string($con,$pwd); 
         $sql = mysqli_query($con,"SELECT * FROM `supper_login` WHERE `email` LIKE '$sanitized_email' AND `pwd` LIKE '$sanitized_password'");
         if (mysqli_num_rows($sql)){
-            $_SESSION['email'] = $email;
-            header("location:index.php");
+                $_SESSION['email'] = $email;
+                header("location:ad_index.php");
+                $con.close();
+        }
+        else{
+            echo "<script>alert('plese enter correct email or password')</script>";
+            $con.close();
         }
     }
 ?>

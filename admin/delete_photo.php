@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    include "supper_session.php";
     $id = $_GET['id'];
     include "conn.php";
 
