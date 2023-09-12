@@ -279,8 +279,8 @@
 
  $name=$_POST['name'];
  $email=$_POST['email'];
- $subject=$_post['subject'];
- $massage=$_POST['massege'];
+ $subject=$_POST['subject'];
+ $massage=$_POST['massage'];
 
  if(isset($_POST['submit'])){
     
@@ -288,12 +288,9 @@
     $sql="INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`, `date`) VALUES (NULL, '$name', '$email', '$subject', '$massage', current_timestamp());";
   
      mysqli_query($con,$sql);
-    echo"<script>alert('deta insert')</script>";
+      echo"<script>alert('your massage send...')</script>";
  }
- else{
-  echo"<script>alert('deta not insert')</script>";
 
- }
 
 ?>
 

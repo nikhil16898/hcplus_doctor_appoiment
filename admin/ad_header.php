@@ -9,9 +9,6 @@
   </head>
   <body>
   	<div class="ad_header">
-  		<div class="ad_title">
-  			<center><h1>HealthcarePlus-Admin Panale</h1></center>
-  		</div>
   		  <div class="header" style='z-index:99;'>
         <nav >
         <img src="../img\logo.png" alt="logo">
@@ -20,10 +17,11 @@
           <i class="fa-solid fa-bars"></i>
         </label>
                 <ul>
-                    <li><a href="ad_doctor-appoiment.php">Appointments</a></li>
+                    <li><a href="index.php">Appointments</a></li>
                     <li><a href="upload_img.php">Upload photo</a></li>
-                    <li><a href="#">users</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li><a href="show-users.php">users</a></li>
+                    <li><a href="show-contact.php">Contacts</a></li>
+                    <li><a href="#">Logout</a></li>
                 </ul>
         </nav>
     </div>

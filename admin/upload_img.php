@@ -11,9 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Upload</title>
 <style type="text/css">
-    body{
+    *{
         margin: 0;
         padding: 0;
+    }
+
+    .title{
+          background-color: #3fbbc0;
+    }
+    .title h1{
+      color: white;
+      font-size: 50px;
+      padding: 25px 100px;
     }
     form h2{
         color: white;
@@ -61,6 +70,9 @@
 </style>
 </head>
 <body> 
+<div class="title">
+<h1>Upload Image</h1>
+</div>
     <form action="#" method="POST" enctype="multipart/form-data" class="main">
         <center><h2>Upload Photo</h2></center>
         <input type="file" name="uploadphoto" class="file">

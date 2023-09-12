@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2023 at 07:18 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.0.19
+-- Generation Time: Sep 12, 2023 at 08:12 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,21 +34,23 @@ CREATE TABLE `contact` (
   `subject` text NOT NULL,
   `message` text NOT NULL,
   `date` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `contact`
 --
 
 INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`, `date`) VALUES
-(1, 'abhi', 'abhi@gmail.com', 'adsa', 'sfssd', '2023-09-11'),
-(2, 'abhi', 'rewe', 'ff', 'dfd', '2023-09-11'),
-(3, 'dfsdfdd', 'aasdas', '', 'apapa', '2023-09-11'),
-(4, 'abhi', 'abh@gmil', 'dssadsaddfdv', 'xcvxcv', '2023-09-11'),
-(5, 'dfdfd', 'sdaasd', 'sdsdsads', 'sdaasdas', '2023-09-12'),
-(6, 'Abhi ratanpara', 'abhi@gmail.com', '', '', '2023-09-12'),
-(7, 'ap', 'ap@gmail.com', '', '', '2023-09-12'),
-(8, 'ap', 'ap@gmail.com', '', '', '2023-09-12');
+(1, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12'),
+(2, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12'),
+(3, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12'),
+(4, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12'),
+(5, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12'),
+(6, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12'),
+(7, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12'),
+(8, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12'),
+(9, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12'),
+(10, 'NIKHIL', 'nikhil@gmail.com', '', '', '2023-09-12');
 
 -- --------------------------------------------------------
 
@@ -58,10 +60,10 @@ INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`, `date`) VALU
 
 CREATE TABLE `doctor` (
   `id` int(5) NOT NULL,
-  `dnm` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `dimg` text CHARACTER SET latin1 NOT NULL,
-  `detail` text CHARACTER SET latin1 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `dnm` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `dimg` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `detail` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -70,31 +72,29 @@ CREATE TABLE `doctor` (
 --
 
 CREATE TABLE `doctor-appointment` (
+  `id` int(3) NOT NULL,
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `number` int(10) NOT NULL,
+  `blood_group` varchar(3) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `age` int(3) NOT NULL,
   `doctor` varchar(50) NOT NULL,
   `address` varchar(100) NOT NULL,
   `massage` text NOT NULL,
-  `date` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `date` date NOT NULL DEFAULT current_timestamp(),
+  `status` varchar(10) NOT NULL DEFAULT 'pending'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `doctor-appointment`
 --
 
-INSERT INTO `doctor-appointment` (`name`, `email`, `number`, `gender`, `age`, `doctor`, `address`, `massage`, `date`) VALUES
-('asd', 'asd@asd', 123456, 'male', 12, 'Nikhil', 'asdadmnadbadas', 'asdad', '2023-08-01'),
-('kjdsfb', 'Asah@kdfjgk', 789, 'male', 45, 'Jenil', 'sdmnfvhshf', 'sznmfbsd', '2023-08-01'),
-('saklen', 'sasaxa@ass.com', 2147483647, 'male', 19, 'Raj', 'manavadar ', 'kaynay khale', '2023-08-01'),
-('nayan', 'nayan@gmail.com', 789456, 'male', 19, 'Abhi', 'jgjdfgs', 'sdjhfjk', '2023-08-01'),
-('riya', 'riya@gmail.com', 1234567893, 'femal', 17, 'Nikhil', 'zinzari', 'dskhfshf', '2023-08-01'),
-('avani', 'avani@avani', 123, 'femal', 14, 'Nikhil', 'zinzari', 'hgcdrct7\r\n\r\n\r\n89jhgyut', '2023-08-01'),
-('NIKHIL', 'nikhil@gmail.com', 2147483647, 'male', 19, 'Kartik', 'rf', 'rf', '2023-08-22'),
-('daSD', 'asd@gmail.com', 87879, 'male', 45, 'Abhi', 'dsf', 'sd', '2023-08-22'),
-('abhi', 'abhi@gmail.com', 2147483647, 'male', 19, 'Raj', 'asd', 'dfsa', '2023-08-24');
+INSERT INTO `doctor-appointment` (`id`, `name`, `email`, `number`, `blood_group`, `gender`, `age`, `doctor`, `address`, `massage`, `date`, `status`) VALUES
+(1, 'NIKHIL', 'nikhil@gmail.com', 2147483647, 'B', 'Male', 18, 'Nikhil', 'asd', 'we', '2023-09-08', 'pending'),
+(2, 'abhi', 'abhi@gmail.com', 456, 'B+', 'Male', 21, 'Abhi', 'asc', 'zcz', '2023-09-08', 'pending'),
+(6, 'NIKHIL', 'abhi@gmail.com', 45678, 'A+', 'Male', 54, 'Abhi', 'sac', 's\r\n', '2023-09-08', 'pending'),
+(8, 'raj', 'nikhil@gmail.com', 5, 'B', 'Male', 19, 'Nikhil', 'dcs', 'dcds', '2023-09-09', 'pending');
 
 -- --------------------------------------------------------
 
@@ -103,26 +103,27 @@ INSERT INTO `doctor-appointment` (`name`, `email`, `number`, `gender`, `age`, `d
 --
 
 CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
   `img` varchar(400) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `gallery`
 --
 
-INSERT INTO `gallery` (`img`) VALUES
-('gallery/Acer_Wallpaper_04_3840x2400.jpg'),
-('gallery/Acer_Wallpaper_05_3840x2400.jpg'),
-('gallery/docter1.jpg'),
-('gallery/docter2.jpg'),
-('gallery/r2.jpg'),
-('gallery/s1.jpg'),
-('gallery/slider_1.jpg'),
-('gallery/slider_2.jpg'),
-('gallery/slider_3.jpg'),
-('gallery/about.jpg'),
-('gallery/footer.jpg'),
-('gallery/logo.png');
+INSERT INTO `gallery` (`id`, `img`) VALUES
+(1, 'gallery/Acer_Wallpaper_04_3840x2400.jpg'),
+(2, 'gallery/Acer_Wallpaper_05_3840x2400.jpg'),
+(3, 'gallery/docter1.jpg'),
+(4, 'gallery/docter2.jpg'),
+(5, 'gallery/r2.jpg'),
+(6, 'gallery/s1.jpg'),
+(7, 'gallery/slider_1.jpg'),
+(8, 'gallery/slider_2.jpg'),
+(9, 'gallery/slider_3.jpg'),
+(10, 'gallery/about.jpg'),
+(11, 'gallery/footer.jpg'),
+(12, 'gallery/logo.png');
 
 -- --------------------------------------------------------
 
@@ -138,16 +139,36 @@ CREATE TABLE `signup` (
   `pwd` varchar(50) NOT NULL,
   `confirm` varchar(50) NOT NULL,
   `date` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `signup`
 --
 
 INSERT INTO `signup` (`id`, `name`, `email`, `mobile_number`, `pwd`, `confirm`, `date`) VALUES
-(1, 'nikhil', 'nikhil@gmail.com', 1234567890, '123', '123', '2023-08-22'),
-(2, 'asdad', 'asd@gmail.com', 456, '789', '789', '2023-08-22'),
-(3, 'Abhi', 'abhi@gmail.com', 2147483647, '789', '789', '2023-08-24');
+(1, 'nikhil', 'nikhil@gmail.com', 7892, '123', '123', '2023-09-08'),
+(2, 'abhi', 'abhi@gmail.com', 7544, '123', '123', '2023-09-08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `supper_login`
+--
+
+CREATE TABLE `supper_login` (
+  `id` int(3) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `pwd` varchar(50) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `supper_login`
+--
+
+INSERT INTO `supper_login` (`id`, `email`, `pwd`, `date`) VALUES
+(1, 'nikhil@gmail.com', 'nikhil', '2023-09-07'),
+(2, 'abhi@gmail.com', 'abhi', '2023-09-12');
 
 --
 -- Indexes for dumped tables
@@ -166,9 +187,29 @@ ALTER TABLE `doctor`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `doctor-appointment`
+--
+ALTER TABLE `doctor-appointment`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `email` (`email`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `signup`
 --
 ALTER TABLE `signup`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `supper_login`
+--
+ALTER TABLE `supper_login`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -179,7 +220,7 @@ ALTER TABLE `signup`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `doctor`
@@ -188,10 +229,38 @@ ALTER TABLE `doctor`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `doctor-appointment`
+--
+ALTER TABLE `doctor-appointment`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT for table `signup`
 --
 ALTER TABLE `signup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `supper_login`
+--
+ALTER TABLE `supper_login`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `doctor-appointment`
+--
+ALTER TABLE `doctor-appointment`
+  ADD CONSTRAINT `email` FOREIGN KEY (`email`) REFERENCES `signup` (`email`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
