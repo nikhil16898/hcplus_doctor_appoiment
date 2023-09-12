@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 27, 2023 at 08:15 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Sep 12, 2023 at 07:18 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,15 +24,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` text NOT NULL,
+  `subject` text NOT NULL,
+  `message` text NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`, `date`) VALUES
+(1, 'abhi', 'abhi@gmail.com', 'adsa', 'sfssd', '2023-09-11'),
+(2, 'abhi', 'rewe', 'ff', 'dfd', '2023-09-11'),
+(3, 'dfsdfdd', 'aasdas', '', 'apapa', '2023-09-11'),
+(4, 'abhi', 'abh@gmil', 'dssadsaddfdv', 'xcvxcv', '2023-09-11'),
+(5, 'dfdfd', 'sdaasd', 'sdsdsads', 'sdaasdas', '2023-09-12'),
+(6, 'Abhi ratanpara', 'abhi@gmail.com', '', '', '2023-09-12'),
+(7, 'ap', 'ap@gmail.com', '', '', '2023-09-12'),
+(8, 'ap', 'ap@gmail.com', '', '', '2023-09-12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `doctor`
 --
 
 CREATE TABLE `doctor` (
   `id` int(5) NOT NULL,
-  `dnm` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `dimg` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `detail` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `dnm` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `dimg` text CHARACTER SET latin1 NOT NULL,
+  `detail` text CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -50,7 +79,7 @@ CREATE TABLE `doctor-appointment` (
   `address` varchar(100) NOT NULL,
   `massage` text NOT NULL,
   `date` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `doctor-appointment`
@@ -75,7 +104,7 @@ INSERT INTO `doctor-appointment` (`name`, `email`, `number`, `gender`, `age`, `d
 
 CREATE TABLE `gallery` (
   `img` varchar(400) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `gallery`
@@ -109,7 +138,7 @@ CREATE TABLE `signup` (
   `pwd` varchar(50) NOT NULL,
   `confirm` varchar(50) NOT NULL,
   `date` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `signup`
@@ -123,6 +152,12 @@ INSERT INTO `signup` (`id`, `name`, `email`, `mobile_number`, `pwd`, `confirm`, 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `doctor`
@@ -139,6 +174,12 @@ ALTER TABLE `signup`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `doctor`

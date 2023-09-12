@@ -1,5 +1,6 @@
 <?php
   session_start(); 
+  error_reporting(0);
 ?>
 <!doctype html>
 <html lang="en">
@@ -249,22 +250,22 @@
          </div>
 
          <div class="col-lg-8 mt-5 mt-lg-0">
-           <form class="contact-form">
+           <form class="contact-form" method="POST">
              <div class="row">
                <div class="col-md-6 form-group">
-                 <input type="" name="" class="form-control" id="name" placeholder="your name" required="">
+                 <input type="" name="name" class="form-control" id="name" placeholder="your name" required="">
                </div>
              <div class="col-md-6 form-group mt-3 mt-md-0">
-               <input type="email" name="" class="form-control" id="email" placeholder="your email" required="">
+               <input type="email" name="email" class="form-control" id="email" placeholder="your email" required="">
              </div>
             <div class="form-group mt-3">
-              <input type="" name="" class="form-control" id="subject" placeholder="subject" required="">
+              <input type="" name="subject" class="form-control" id="subject" placeholder="subject" required="">
             </div>
             <div class="form-group mt-3">
-              <textarea name="" rows="5" class="form-control" placeholder="Message(optional)"></textarea>
+              <textarea name="massage" rows="5" class="form-control" placeholder="Message(optional)"></textarea>
             </div>
             <div class="text-center">
-              <button type="submit">Send Message</button>
+              <button type="submit" name="submit">Send Message</button>
             </div>
            </form>
          </div>
@@ -272,6 +273,30 @@
      </div>
   </div>
   
+<?php
+ 
+ include "conn.php";
+
+ $name=$_POST['name'];
+ $email=$_POST['email'];
+ $subject=$_post['subject'];
+ $massage=$_POST['massege'];
+
+ if(isset($_POST['submit'])){
+    
+    // $sql="insert into `contact`(`name`,`email`,`subject`,`massage`)values('$name','$email','$subject','$massege')";
+    $sql="INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`, `date`) VALUES (NULL, '$name', '$email', '$subject', '$massage', current_timestamp());";
+  
+     mysqli_query($con,$sql);
+    echo"<script>alert('deta insert')</script>";
+ }
+ else{
+  echo"<script>alert('deta not insert')</script>";
+
+ }
+
+?>
+
 </section>
 
 <footer>
