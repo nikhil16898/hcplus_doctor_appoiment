@@ -1,6 +1,7 @@
 <?php
     session_start();
     error_reporting(0);
+    include "supper_session.php";
     include "ad_header.php";
 
 ?>

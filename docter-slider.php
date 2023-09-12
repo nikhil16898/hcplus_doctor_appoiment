@@ -1,5 +1,9 @@
  <!-- doctor -->
 <!-- doctor title -->
+<?php 
+  include "session_start.php";
+  error_reporting(0);
+?>
 <div class="do">
    <div class="docter">
      

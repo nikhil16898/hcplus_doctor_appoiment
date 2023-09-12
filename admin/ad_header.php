@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include "supper_session.php";
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -24,6 +28,7 @@
                     <li><a href="upload_img.php">Upload photo</a></li>
                     <li><a href="#">users</a></li>
                     <li><a href="#">Contacts</a></li>
+                    <li><a href="leave.php">Leave</a></li>
                 </ul>
         </nav>
     </div>

@@ -1,3 +1,7 @@
+<?php 
+  include "session_start.php";
+  error_reporting(0);
+?>
  <!-- gallery -->
  <!-- <div class="gallery">
     <div class="gallery_title">
