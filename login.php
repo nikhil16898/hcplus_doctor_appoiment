@@ -39,7 +39,6 @@
         $sanitized_password = mysqli_real_escape_string($con,$p);
         
         $sql = mysqli_query($con,"SELECT * FROM `signup` WHERE `email` LIKE '".$sanitized_email."' AND `pwd` LIKE '".$sanitized_password."'") or die(mysqli_error);
-        // $sql = mysqli_query($con,"SELECT * FROM `signup` WHERE `email` LIKE '".$e."' AND `pwd` LIKE '".$p."'") or die(mysqli_error);
     
             if($r = mysqli_num_rows($sql)){
             // success

@@ -1,3 +1,7 @@
+<?php   
+    error_reporting(0);
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +31,13 @@
         $sanitized_password = mysqli_real_escape_string($con,$pwd); 
         $sql = mysqli_query($con,"SELECT * FROM `supper_login` WHERE `email` LIKE '$sanitized_email' AND `pwd` LIKE '$sanitized_password'");
         if (mysqli_num_rows($sql)){
-            $_SESSION['email'] = $email;
-            header("location:index.php");
+                $_SESSION['email'] = $email;
+                header("location:ad_index.php");
+                $con.close();
+        }
+        else{
+            echo "<script>alert('plese enter correct email or password')</script>";
+            $con.close();
         }
     }
 ?>

@@ -277,17 +277,16 @@
  
  include "conn.php";
 
- $name=$_POST['name'];
- $email=$_POST['email'];
- $subject=$_post['subject'];
- $massage=$_POST['massege'];
 
  if(isset($_POST['submit'])){
     
-    // $sql="insert into `contact`(`name`,`email`,`subject`,`massage`)values('$name','$email','$subject','$massege')";
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $subject=$_post['subject'];
+    $massage=$_POST['massege'];
     $sql="INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`, `date`) VALUES (NULL, '$name', '$email', '$subject', '$massage', current_timestamp());";
   
-     mysqli_query($con,$sql);
+    mysqli_query($con,$sql);
     echo"<script>alert('deta insert')</script>";
  }
  else{

@@ -1,7 +1,4 @@
-<?php
-    session_start();
-    include "supper_session.php";
-?>
+
 <!doctype html>
 <html lang="en">
   <head>
